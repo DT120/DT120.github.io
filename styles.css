@@ -105,6 +105,30 @@ p {
     background-color: #ffaf40;
 }
 
+.about-me-button:active {
+    color: #eaeaea
+}
+
+.projects-button {
+    background-color: #f48c06;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.2s;
+}
+
+.projects-button:hover {
+    background-color: #ffaf40;
+}
+
+.projects-button:active {
+    color: #eaeaea
+}
+
 .page-footer {
     background-color: #000;
     color: #eaeaea;
@@ -187,7 +211,7 @@ p {
     transform-origin: left;
 }
 
-.home-page-text h2, .home-page-text h1, .home-page-text p, .about-me-button {
+.home-page-text h2, .home-page-text h1, .home-page-text p, .projects-button, .about-me-button {
     opacity: 0;
     animation: slideIn 1s ease-out forwards;
 }
@@ -215,6 +239,10 @@ p {
 }
 
 .about-me-button {
+    animation-delay: 1s;
+}
+
+.projects-button {
     animation-delay: 1s;
 }
 
