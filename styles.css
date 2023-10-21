@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: #1b1b1b;
+    font-family: "Arial", sans-serif;
+    color: #eaeaea;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.page-header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.navbar {
+    text-align: center;
+}
+
+.navbar ul {
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #eaeaea;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: #f48c06;
+}
+
+.navbar a.active {
+    border-bottom: 2px solid #f48c06;
+}
+
+.page-content {
+    padding: 50px;
+    background-color: #1b1b1b;
+    animation: fadeIn 0.8s forwards;
+}
+
+.home-page {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.home-page-text {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 48px;
+    color: #f48c06;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #eaeaea;
+    margin-top: 0;
+}
+
+p {
+    font-size: 18px;
+    color: #b1b1b1;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.about-me-button {
+    background-color: #f48c06;
+    color: #000;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.2s;
+}
+
+.about-me-button:hover {
+    background-color: #ffaf40;
+}
+
+.page-footer {
+    background-color: #000;
+    color: #eaeaea;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.page-footer a {
+    color: #f48c06;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.page-footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .navbar li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.page-content {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #f48c06;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+}
+
+.nav-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.home-page-text h2, .home-page-text h1, .home-page-text p, .about-me-button {
+    opacity: 0;
+    animation: slideIn 1s ease-out forwards;
+}
+
+.home-page-text h2 {
+    animation-delay: 0.2s;
+}
+
+.home-page-text h1 {
+    animation-delay: 0.4s;
+}
+
+.home-page-text .profile-img {
+    animation: fadeIn 1.5s ease-out forwards;
+    margin: 20px 0;
+    border-radius: 50%; /* Makes the image circular */
+}
+
+.home-page-text h2:nth-of-type(2) { /* Targeting the second h2 */
+    animation-delay: 0.6s;
+}
+
+.home-page-text p {
+    animation-delay: 0.8s;
+}
+
+.about-me-button {
+    animation-delay: 1s;
+}
+
+/* Styling the footer */
+.page-footer {
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2); /* Slight border at the top */
+}
